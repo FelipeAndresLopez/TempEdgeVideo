@@ -4,9 +4,18 @@
 body {
   margin: 0;
   font-family: $theme-font;
-  background: $main-color;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-image: url(https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289_960_720.jpg);
 }
 
 * {
   box-sizing: border-box;
+}
+
+#app {
+  background-color: rgba(43, 38, 40, 0.719);
 }

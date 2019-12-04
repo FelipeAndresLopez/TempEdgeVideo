@@ -2,24 +2,19 @@
   color: white;
   height: 100px;
   top: 0px;
-  width: 100%;
 }
 
 .header__img {
-  margin-left: 30px;
   width: 200px;
-}
-
-.header__menu {
-  margin-right: 30px;
 }
 
 .header__menu ul {
   display: none;
   list-style: none;
-  margin: 0px 0px 0px -14px;
+  // margin: 0px 0px 0px -14px;
   padding: 0px;
   position: absolute;
+  right: 14px;
   width: 100px;
   text-align: right;
 }
@@ -46,6 +41,7 @@ ul:hover {
   align-items: center;
   display: flex;
   cursor: pointer;
+  justify-content: flex-end;
 }
 
 .header__menu--profile img {
