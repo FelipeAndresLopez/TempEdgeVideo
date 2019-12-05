@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../assets/styles/components/Header.scss";
 
 import logo from "../assets/static/logo-tempedge-video.png";
@@ -8,7 +10,9 @@ const Header = () => (
   <div className="container">
     <header className="row justify-content-between align-items-center header">
       <div className="col-4">
-        <img className="header__img" src={logo} alt="TempEdge Video" />
+        <Link to="/">
+          <img className="header__img" src={logo} alt="TempEdge Video" />
+        </Link>
       </div>
 
       <div className="col-2">
@@ -19,10 +23,10 @@ const Header = () => (
           </div>
           <ul>
             <li>
-              <a href="/">Cuenta</a>
+              <Link to="#">Cuenta</Link>
             </li>
             <li>
-              <a href="/">Cerrar Sesión</a>
+              <Link to="/login">Iniciar sesión</Link>
             </li>
           </ul>
         </div>
