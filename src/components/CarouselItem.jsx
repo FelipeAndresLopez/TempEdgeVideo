@@ -12,16 +12,24 @@ import plusIcon from "../assets/static/plus-icon.png";
 import removeIcon from "../assets/static/remove-icon.png";
 
 const CarouselItem = props => {
-  const { id, cover, title, year, contentRating, duration, isList } = props;
+  const {
+    id,
+    medium_cover_image,
+    title,
+    year,
+    rating,
+    runtime,
+    isList
+  } = props;
 
   const handleSetFavorite = () => {
     props.setFavorite({
       id,
-      cover,
+      medium_cover_image,
       title,
       year,
-      contentRating,
-      duration
+      rating,
+      runtime
     });
   };
 
@@ -30,13 +38,18 @@ const CarouselItem = props => {
   };
 
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-auto">
       <div className="carousel-item">
-        <img className="carousel-item__img" src={cover} alt={title} />
+        <img
+          className="carousel-item__img"
+          src={medium_cover_image}
+          alt={title}
+        />
         <div className="carousel-item__details">
           <div>
             <Link to={`/player/${id}`}>
               <img
+                title="Reproducir"
                 className="carousel-item__details--img"
                 src={playIcon}
                 alt="Play Icon"
@@ -45,6 +58,7 @@ const CarouselItem = props => {
 
             {isList ? (
               <img
+                title="Remover de favoritos"
                 className="carousel-item__details--img"
                 src={removeIcon}
                 alt="Remove Icon"
@@ -52,6 +66,7 @@ const CarouselItem = props => {
               />
             ) : (
               <img
+                title="Añadir a favoritos"
                 className="carousel-item__details--img"
                 src={plusIcon}
                 alt="Plus Icon"
@@ -60,7 +75,7 @@ const CarouselItem = props => {
             )}
           </div>
           <p className="carousel-item__details--title">{title}</p>
-          <p className="carousel-item__details--subtitle">{`${year} ${contentRating} ${duration}`}</p>
+          <p className="carousel-item__details--subtitle">{`${year} ${rating} ${runtime}`}</p>
         </div>
       </div>
     </div>
@@ -68,11 +83,11 @@ const CarouselItem = props => {
 };
 
 CarouselItem.propTypes = {
-  cover: PropTypes.string,
+  medium_cover_image: PropTypes.string,
   title: PropTypes.string,
   year: PropTypes.number,
-  contentRating: PropTypes.string,
-  duration: PropTypes.number
+  rating: PropTypes.number,
+  runtime: PropTypes.number
 };
 
 const mapDispatchToProps = {

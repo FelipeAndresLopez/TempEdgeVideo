@@ -1,12 +1,5 @@
 .login {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 30px;
-  min-height: calc(
-    100vh - 200px
-  ); /* El ancho será igual al tamaño de todo el height menos 200px (100px del header + 100px del footer) */
+  margin: 15px 0;
 }
 
 .login__container {
@@ -18,7 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 60px 68px 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .login__container--form {
@@ -72,4 +66,18 @@
 
 .login__container--register a:hover {
   text-decoration: underline;
+}
+
+.login__container--form .button {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 20px;
+  width: 100%;
 }

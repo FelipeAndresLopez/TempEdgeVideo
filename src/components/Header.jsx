@@ -7,7 +7,7 @@ import logo from "../assets/static/logo-tempedge-video.png";
 import userIcon from "../assets/static/user-icon.png";
 
 const Header = () => (
-  <div className="container">
+  <div className="container-fluid">
     <header className="row justify-content-between align-items-center header">
       <div className="col-4">
         <Link to="/">
@@ -22,9 +22,6 @@ const Header = () => (
             <p className="d-none d-sm-block">Perfil</p>
           </div>
           <ul>
-            <li>
-              <Link to="#">Cuenta</Link>
-            </li>
             <li>
               <Link to="/login">Iniciar sesión</Link>
             </li>

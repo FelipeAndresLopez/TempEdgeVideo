@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/components/Footer.scss";
 
 const Footer = () => (
-  <footer className="container">
+  <footer className="container-fluid">
     <div className="row align-items-center footer">
-      <div className="col-md-3 col-sm-12">
-        <a href="/">Terminos de uso</a>
+      <div className="col-sm-12 col-md-auto col-lg-auto">
+        <Link to="/">Términos de uso</Link>
       </div>
-      <div className="col-md-3 col-sm-12">
-        <a href="/">Declaración de privacidad</a>
+      <div className="col-sm-12 col-md-auto col-lg-auto">
+        <Link to="/">Declaración de privacidad</Link>
       </div>
-      <div className="col-md-3 col-sm-12">
-        <a href="/">Centro de ayuda</a>
+      <div className="col-sm-12 col-md-auto col-lg-auto">
+        <Link to="/">Centro de ayuda</Link>
       </div>
     </div>
   </footer>
